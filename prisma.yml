@@ -1,3 +1,3 @@
-endpoint: http://localhost:4466/linkedList/dev
+endpoint: http://localhost:4466/multiplPathRes/dev
 datamodel: datamodel.graphql
 secret: 'mysecret123'
