@@ -1,4 +1,7 @@
 ## multiple Path Resol
+
+*(prisma 15.3 and test with prisma 20.1)*
+
 Received an error when try to query parents data for two types but with one missing in the first type.
 
 Error message received from query: "Whoops. Looks like an internal server error. Search your server logs for request ID: local:api:{ID}"
@@ -8,9 +11,9 @@ Error message received from query: "Whoops. Looks like an internal server error.
 
 ## To reproduce:
 **Clone the repository:**
-git clone https://github.com/ChRomain/MultiplePathResolution.git
-cd multiplePathResol/
-npm install
+1. git clone https://github.com/ChRomain/MultiplePathResolution.git
+2. cd multiplePathResol/
+3. npm install
 
 **Start the server**
 npm-run prisma deploy
