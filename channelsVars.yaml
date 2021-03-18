@@ -1,0 +1,107 @@
+channel:
+  id: "lc102s5icd"
+  name: "espn"
+  labels:
+    - "espn"
+  logo: null
+  enable: true
+  url: "https://storage.googleapis.com/logos/frame_dog_medium.png"
+  horizontal_offset: 20
+  vertical_offset: 20
+  blackout_slate:
+    enable: true
+    url: "https://storage.googleapis.com/sky-logos/frame_dog_medium.png"
+  publish_name: "espn"
+  is_sport: false
+  transcoding_profile: "089f847b-5bde-40ab-9bf2-53d36bc64ede"
+  destination_profile_default: "f381bc35-0c11-ec81-5d9d-dc281f8164e4"
+  destination_profile_sport: "07150d66-9bc9-e646-74f1-7e07182a834e"
+  encryption:
+    enable: true
+    ressource:
+      - profile_name: "HLSfphm1"
+        resource_id: "39f6d142-40a1-400f-9a95-1e0f9bf1cdf1"
+        hls:
+          - fixed_key: "76098013eb437554649fa3016ca3fe4e"
+          - fixed_key_id: "96c395efd8864bcda2c72a57662cff66"
+          - fairplay_license_acquisition_url: "skd://drm.licensing.server"
+      - profile_name: "SSprhm1"
+        resource_id: "21c52349-9e66-49d4-a70f-5e92f51a4c9d"
+        ssh:
+          - fixed_key: "F748228F832907BD6B9EBCBEEFB500E3"
+          - dsId: "AH+03juKbUGbHl1V/QIwRA=="
+          - kid: "q9AVCd/8tkeOixx5oKIVTQ=="
+      - profile_name: "DASHcehm1"
+        resource_id: "d96b6269-0483-46b7-aafc-93633fff6aca"
+        dash:
+          - fixed_iv: "118292E423E15E4BB87C99063FA162A0"
+          - fixed_key: "76098013eb437554649fa3016ca3fe4e"
+          - fixed_key_id: "96c395efd8864bcda2c72a57662cff66"
+          - playready_dsId: "AH+03juKbUGbHl1V/QIwRA=="
+          - widevine_provider: "widevine_test"
+          - widevine_contentId: "epsn-sd"
+          - widevine_trackType: "SD"
+    internal_keys_gen:
+      resources:
+        - profile_name: "HLSinthm1"
+          resource_id: "3a4f72aa-bde1-4f34-bef0-924cfceb764f"
+          external_keys_publishing:
+            enable: true
+            publishing_url: "https://127.0.0.1:443/key"
+            username: "abc"
+            password: "abc"
+            key_retrival_url: "https://127.0.0.1:443/key"
+    cisco_vge:
+      kms_url: "https://ciscovgeott.com:6711"
+      resources:
+        - profile_name: "HLSvgehm1"
+          resource_id: "espn-sd"
+        - profile_name: "HLSvgehm2"
+          resource_id: "espn-hd"
+    internal_kms:
+      resources:
+        - profile_name: "ikms_sd"
+          resource_id: "hrteg365-24fy-h343-5844-wfeg56432r25"
+    hkms:
+      kms_url: "https://fe.staging.drmtoday.com/frontend/harmonic/Key?merchant=harmonicinc_nbcdemo&harmonicCon"
+      resources:
+        - profile_name: "01"
+          resource_id: "nbc-news-dash"
+        - profile_name: "02"
+          resource_id: "nbc-news-hls"
+          hls: null
+    cpix_cks:
+      kms_url: "https://cks-external-gtm.ovp.stable-int.nbcuott.com/cpix/v2/TEST-ISTREAMPLANET-CBCS/{contentId"
+      enableHttpsCertValidation: false
+      username: "harmonic"
+      password: "JrG0h2FIkOKDFErW"
+      resources:
+        - profile_name: "CBCS"
+          resource_id: "caso119"
+          cmaf: null
+    cpix_cks_ctr:
+      kms_url: "https://cks-external-gtm.ovp.stable-int.nbcuott.com/cpix/v2/TEST-ISTREAMPLANET/{contentId}?key"
+      enableHttpsCertValidation: false
+      username: "harmonic"
+      password: "JrG0h2FIkOKDFErW"
+      ressources:
+        - profile_name: "CTR"
+          resource_id: "caso119"
+          cmaf: null
+    video_insertion:
+      enable: true
+      acquisition_point_id: "nbc-news"
+      time_offset: 0
+    rtmp_publishing:
+      enable: true
+      endpoints:
+        - profile_name: "rtmp1"
+          hostname: "a.rtmp.youtube.com"
+          path: "/live2/"
+          stream_name: "aeuu-fruq-gy77-7j2t"
+          enable_ssl: false
+        - profile_name: "rtmp2"
+          hostname: "live-api-s.facebook.com"
+          path: "/rtmp/"
+          stream_name: "222577643554807?s_bl=0&s_ps=1&s_sw=0&s_vt=api-s&a=AbyxBNrOyCSZsQxdB23"
+          enable_ssl: true
